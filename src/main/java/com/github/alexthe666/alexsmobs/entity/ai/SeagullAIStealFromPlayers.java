@@ -36,7 +36,7 @@ public class SeagullAIStealFromPlayers extends Goal {
     @Override
     public boolean canUse() {
         if (seagull.hasEatenSeed) {
-            System.out.println("[DEBUG] Seagull " + seagull.getId() + " will not steal: has eaten a seed.");
+            // System.out.println("[DEBUG] Seagull " + seagull.getId() + " will not steal: has eaten a seed.");
             return false;
         }
         if (this.seagull.getNoActionTime() >= 100 || seagull.isSitting() || !AMConfig.seagullStealing) {
@@ -51,7 +51,7 @@ public class SeagullAIStealFromPlayers extends Goal {
         if (this.seagull.getMainHandItem().isEmpty()) {
             Player valid = getClosestValidPlayer();
             if (valid != null) {
-                System.out.println("[DEBUG] Seagull " + seagull.getId() + " will try to steal from player: " + valid.getName().getString());
+                // System.out.println("[DEBUG] Seagull " + seagull.getId() + " will try to steal from player: " + valid.getName().getString());
                 target = valid;
                 return true;
             }

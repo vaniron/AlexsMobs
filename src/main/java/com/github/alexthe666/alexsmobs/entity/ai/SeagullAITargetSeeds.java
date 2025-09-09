@@ -54,7 +54,7 @@ public class SeagullAITargetSeeds extends Goal {
 
             if (seagull.distanceToSqr(targetSeed) < 0.5) {
                 if (targetSeed.isAlive()) {
-                    System.out.println("[DEBUG] Seagull " + seagull.getId() + " ate a seed at " + targetSeed.blockPosition());
+                    // System.out.println("[DEBUG] Seagull " + seagull.getId() + " ate a seed at " + targetSeed.blockPosition());
                     targetSeed.discard();
                     seagull.hasEatenSeed = true;
 
